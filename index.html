@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brincando com Sons e Letras | Alfabetização com Afeto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --soft-blue: #E3F2FD;
+            --soft-pink: #FCE4EC;
+            --soft-yellow: #FFF9C4;
+            --soft-green: #E8F5E9;
+            --brand-blue: #54A0FF;
+            --brand-pink: #FF8DA1;
+            --text-color: #5A5A5A;
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            background-color: #FFFFFF;
+            color: var(--text-color);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fredoka One', cursive;
+            color: var(--brand-blue);
+            margin-top: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--soft-blue) 0%, #ffffff 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            color: var(--brand-pink);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* Botão com animação flutuante */
+        .btn-comprar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 35px;
+            font-size: 1.25rem;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+            animation: floating 3s ease-in-out infinite;
+            width: 85%;
+            max-width: 320px;
+            transition: 0.3s;
+        }
+
+        .btn-comprar:active {
+            transform: scale(0.95);
+        }
+
+        /* Benefícios */
+        .beneficios {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 30px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .card:nth-child(1) { background-color: var(--soft-pink); animation-delay: 0.2s; }
+        .card:nth-child(2) { background-color: var(--soft-yellow); animation-delay: 0.4s; }
+        .card:nth-child(3) { background-color: var(--soft-green); animation-delay: 0.6s; }
+
+        /* Jornada (Sumário) */
+        .jornada {
+            background-color: var(--soft-blue);
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .capitulos-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .capitulo-item {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* Responsividade para Tablets e Desktop */
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 3.2rem; }
+            .hero p { font-size: 1.4rem; }
+            .beneficios { flex-direction: row; }
+            .capitulos-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 800px;
+                margin: 40px auto;
+            }
+            .btn-comprar { width: auto; }
+            .capitulo-item:hover { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>Prepare os olhinhos para brilharem! ✨</h1>
+    <p>Torne a alfabetização um processo natural, divertido e cheio de descobertas com o guia <strong>Brincando com Sons e Letras</strong>.</p>
+    <a href="SEU_LINK_AQUI" class="btn-comprar">QUERO ENSINAR BRINCANDO</a>
+</section>
+
+<section class="beneficios">
+    <div class="card">
+        <h3>Base Forte</h3>
+        <p>A consciência fonológica é o pilar que conecta o som das palavras ao mundo da leitura.</p>
+    </div>
+    <div class="card">
+        <h3>Atividades Lúdicas</h3>
+        <p>Brincadeiras práticas como a "Caça às Rimas" e o "Robô Falante" que encantam as crianças.</p>
+    </div>
+    <div class="card">
+        <h3>Afeto e Recompensa</h3>
+        <p>Estratégias de reforço positivo para celebrar cada conquista do seu pequeno detetive.</p>
+    </div>
+</section>
+
+<section class="jornada">
+    <h2>O que vocês vão descobrir:</h2>
+    <div class="capitulos-grid">
+        <div class="capitulo-item">🎨 O Poder das Rimas</div>
+        <div class="capitulo-item">👏 Batendo Palmas (Sílabas)</div>
+        <div class="capitulo-item">🔍 Primeiros Sons</div>
+        <div class="capitulo-item">🎵 Aliteração Divertida</div>
+        <div class="capitulo-item">🔢 Contando cada Som</div>
+        <div class="capitulo-item">🪄 Mágica de Trocando Sons</div>
+        <div class="capitulo-item">🧩 Quebra-cabeça de Sílabas</div>
+        <div class="capitulo-item">🤖 Voz de Robô (Segmentação)</div>
+        <div class="capitulo-item">🗺️ Mapa do Tesouro Sonoro</div>
+        <div class="capitulo-item">🎓 Certificado de Detetive</div>
+    </div>
+    <a href="SEU_LINK_AQUI" class="btn-comprar">GARANTIR MEU EBOOK</a>
+</section>
+
+<footer>
+    <p>Um guia prático para pais e educadores de crianças de 5 a 7 anos.<br>
+        Transformando o aprendizado em uma jornada inesquecível.</p>
+</footer>
+
+</body>
+</html>
